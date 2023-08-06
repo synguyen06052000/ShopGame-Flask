@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+	<center><p style="color: #3f444a; font-size: 30px;font-weight: bold;">Dịch vụ nổi bật<p></center>
+	<hr width="20%" align="center" color="#32c5d2"/>
+	<div class="item-outstanding-container">
+		<div class = "item-outstanding">
+			<a>
+				<img class="img-item-outstanding" src="{{url_for('static', filename='/Image/' + 'group.png')}}">
+			</a>
+		</div>
+		<div class = "item-outstanding">
+			<a>
+				<img class="img-item-outstanding" src="{{url_for('static', filename='/Image/' + 'facebook.png')}}">
+			</a>
+		</div>
+	</div>
+	<div class="item-outstanding-container">
+		<div class = "item-outstanding">
+			<a>
+				<img class="img-item-outstanding" src="{{url_for('static', filename='/Image/' + 'tra_gop.png')}}">
+			</a>
+		</div>
+		<div class = "item-outstanding">
+			<a>
+				<img class="img-item-outstanding" src="{{url_for('static', filename='/Image/' + 'change_password.png')}}">
+			</a>
+		</div>
+	</div>
+	<center><p style="color: #3f444a; font-size: 30px;font-weight: bold;margin-top: 40px;">DANH MỤC GAME</p></center>
+	<hr width="20%" align="center" color="#32c5d2"/>
+	<div class="container-game_list" style="margin-left: 20px;">
+		<div class="col-sm-6 col-md-3 col-item" style="margin-left:-15px">
+			<div class="item-acc-info">
+				<div class="img-acc">
+					<a href="">
+						<img class="avatar-list-game" src="{{url_for('static', filename='/Image/' + 'lang_la.png')}}">
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="info_list_game">
+			<div class="info-detail">
+				<center><p>Số tài khoản: 1000</p></center>
+				<center><p>Đã bán: 500</p></center>
+			</div>
+		</div>
+		<div class="row-view-acc">
+			<button><a href="/list_acc" class="view-all-acc-button">Xem tất cả</a></button>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -13,9 +13,9 @@
 				<h3>Đăng nhập</h3>
 			</div>
 			<span class="help-block" style="text-align: center;color: #dd4b39">
-                <strong id="messageError"></strong>
+                <strong id="messageError">{{msg_login_error}}</strong>
             </span>          
-			<form method="POST" class="form-body">
+			<form method="POST" class="form-body" action="">
 				<div class="form-row">
 					<input type="text" class="form-control" name="username" value="" placeholder="Tài khoản">
 				</div>
@@ -24,11 +24,11 @@
 				</div>
 				<div class="button-row-container">
 					<div class="button-row-login" style="margin-top: 10px;">
-						<button type="submit" class="btn btn-success btn-login" style="margin-right: 7px;"><a class="a-btn-login " id="loginButton" onclick="loginFormSubmit()">Đăng nhập</a></button>
+						<button type="submit" class="btn btn-success btn-login" style="margin-right: 7px;"><a class="a-btn-login " id="loginButton">Đăng nhập</a></button>
 						<button type="button" class="btn btn-danger btn-google" style="margin-left: 9px;">Quên mật khẩu</button>
 					</div>
 				</div>
-				<a style="margin-top: 10px;" href="#">Bạn chưa có tài khoản, đăng ký</a>
+				<a style="margin-top: 10px;" href="/register">Bạn chưa có tài khoản, đăng ký</a>
 			</form>
 		</div>
 	</div>

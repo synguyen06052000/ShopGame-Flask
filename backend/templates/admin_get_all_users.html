@@ -1,0 +1,28 @@
+{% extends "admin.html" %}
+
+{% block content %}
+<table class="table table-data table-striped">
+    <tr>
+        <th class="title-table">ID</th>
+        <th class="title-table">Tài khoản</th>
+        <th class="title-table">Mật khẩu</th>
+        <th class="title-table">Số điện thoại</th>
+        <th class="title-table">Số dư tài khoản</th>
+        <th class="title-table">Thành viên</th>
+        <th class="title-table">Ngày tham gia</th>
+        <th class="title-table">Thao tác</th>
+    </tr>
+    {% for data in jsondata %}
+        <tr>
+            <td>{{data.id}}</td>
+            <td>{{data.username}}</td>
+            <td>{{data.password}}</td>
+            <td>{{data.phonenumber}}</td>
+            <td>{{data.balance}}</td>
+            <td>{{data.role}}</td>
+            <td>{{data.datejoin}}</td>
+            <td><button type="button" class="btn btn-outline-primary btn-sm">Chỉnh sửa số dư</button></td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

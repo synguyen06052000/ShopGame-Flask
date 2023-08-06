@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-body-info">
+	<center>
+		<div class="info-user-id">
+			{% if user.is_authenticated %}
+				<h2>ID: {{user.id}}</h2>
+				<h2>{{user.username}}</h2>
+				<p>{{user.role}}</p>
+				<p>{{user.balance}}đ</p>
+			{% endif %}
+		</div>
+	</center>
+	<div class="info-container">
+		<div class="detail-info-container">
+			<div class="menu-action-column">
+				<div class="menu-action-row1">
+					<h3>Menu tài khoản</h3>
+					<p><a href="#">Thông tin tài khoản</a></p>
+					<p><a href="/changepassword/{{user.id}}">Đổi mật khẩu</a></p>
+					<p><a href="#">Hộp thư</a></p>
+					<p><a href="#">Lịch sử giao dịch</a></p>
+				</div>
+				<div class="menu-action-row1">
+					<h3>Menu giao dịch</h3>
+					<p><a href="#">Nạp thẻ tự động</a></p>
+					<p><a href="#">Thẻ cào đã nạp</a></p>
+					<p><a href="#">Tài khoản đã mua</a></p>
+					<p><a href="#">Dịch vụ đã mua</a></p>					
+				</div>
+			</div>
+			<div class="info-action-column">
+				{% block content_user %}
+				{% endblock %}
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

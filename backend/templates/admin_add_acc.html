@@ -1,0 +1,64 @@
+{% extends "admin.html" %}
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+    <div>
+        <span name="id-acc">ID:{{id_acc}}</span>
+    </div>
+    <div>
+        <span>Giá tiền</span>
+        <input name="price-acc">
+    </div>
+    <div>
+        <span>Lớp</span>
+        <select name="class-acc">
+            <option>Lớp kiếm</option>
+            <option>Lớp ám khí</option>
+            <option>Lớp gậy</option>
+            <option>Lớp đao</option>
+            <option>Lớp dao</option>
+        </select>
+    </div>
+    <div>
+        <span>Rank</span>
+        <input name="rank-acc">
+    </div>
+    <div>
+        <span>Máy chủ</span>
+        <select name="server-acc">
+            <option>Làng Lá</option>
+            <option>Làng Cát</option>
+            <option>Làng Sương Mù</option>
+            <option>Hachibi</option>
+            <option>Hashirama</option>
+            <option>Madara</option>
+            <option>Itachi</option>
+        </select>
+    </div>
+    <div>
+        <span>Card</span>
+        <select name="card-acc">
+            <option>Không có</option>
+            <option>Vĩnh viễn</option>
+        </select>
+    </div>
+    <div>
+        <span>Vũ khí +</span>
+        <input name="weapon-acc">
+    </div>
+    <div>
+        <span>Cấp</span>
+        <input name="level-acc">
+    </div>
+    <div>
+        <textarea name = "hot-des-acc" id = "note" class="form-control" placeholder="Thông tin miêu tả"></textarea>
+    </div>
+    <input type="file" id="myFile1" name="uploaded-file1" accept=".jpg, .png">
+    <input type="file" id="myFile2" name="uploaded-file2" accept=".jpg, .png">
+    <input type="file" id="myFile3" name="uploaded-file3" accept=".jpg, .png">
+    <input type="file" id="myFile4" name="uploaded-file4" accept=".jpg, .png">
+    <span class="help-block" style="text-align: center;color: #dd4b39">
+        <strong id="messageError">{{msg_upload_img}}</strong>
+    </span>   
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

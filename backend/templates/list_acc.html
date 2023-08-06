@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="POST" enctype="multipart/form-data" class="form-search">
+	<div>
+		<div class="search-list-acc">
+			<div class="search-list-acc-item">
+		        <span>Tìm kiếm</span>
+		        <input name="price-acc" placeholder="Tìm kiếm">
+    		</div>
+    		<div class="search-list-acc-item">
+		        <span>Mã số</span>
+		        <input name="price-acc" placeholder="Mã số">
+    		</div>
+    		<div class="search-list-acc-item">
+        		<span>Giá tiền</span>
+		        <select name="class-acc">
+		            <option>Dưới 50k</option>
+		            <option>Từ 50-200k</option>
+		            <option>Từ 200-500k</option>
+		            <option>Từ 500-1000k</option>
+		            <option>Trên 1 triệu</option>
+		            <option>Trên 5 triệu</option>
+		        </select>
+    		</div>
+    		<div class="search-list-acc-item">
+        		<span>Trạng thái</span>
+		        <select name="class-acc">
+		            <option>Đã bán</option>
+		            <option>Chưa bán</option>
+		        </select>
+    		</div>
+		</div>
+		<div class="search-list-acc">
+			<div class="search-list-acc-item">
+        		<span>Lớp</span>
+		        <select name="class-acc">
+		            <option>Đao</option>
+		            <option>Kiếm</option>
+		            <option>Ám khí</option>
+		            <option>Dao găm</option>
+		            <option>Gậy</option>
+		        </select>
+    		</div>
+    		<div class="search-list-acc-item">
+        		<span>Rank</span>
+		        <select name="class-acc">
+		            <option>0</option>
+		            <option>1</option>
+		            <option>2</option>
+		            <option>3</option>
+		            <option>4</option>
+		            <option>5</option>
+		            <option>6</option>
+		            <option>7</option>
+		            <option>8</option>
+		            <option>9</option>
+		            <option>10</option>
+		        </select>
+    		</div>
+    		<div class="search-list-acc-item">
+        		<span>Máy chủ</span>
+		        <select name="server-acc">
+		            <option>Làng Lá</option>
+		            <option>Làng Cát</option>
+		            <option>Làng Sương Mù</option>
+		            <option>Hachibi</option>
+		            <option>Hashirama</option>
+		            <option>Madara</option>
+		            <option>Itachi</option>
+		        </select>
+    		</div>
+    		<div class="search-list-acc-item">
+		        <span>Card</span>
+		        <select name="card-acc">
+		            <option>Không có</option>
+		            <option>Vĩnh viễn</option>
+		        </select>
+    		</div>
+		</div>
+		<div class="action-list-acc">
+			<div class="search-list-acc-item">
+        		<span>Vũ khí</span>
+		        <select name="class-acc">
+		            <option>+8 đến +11</option>
+		            <option>+12 đến +13</option>
+		            <option>+13</option>
+		            <option>+14 đến +16</option>
+		            <option>Trên +16</option>
+		        </select>
+    		</div>
+    		<button type="button" class="btn btn-primary btn-sm btn-search-acc">Tìm kiếm</button>
+    		<button type="button" class="btn btn-danger btn-sm btn-all-acc">Tất cả</button>
+		</div>
+	</div>
+</form>
+
+<div class="body-list-acc">
+	{% for i in range(0,2) %}
+	<div class="row-item-acc  item-list">
+		{% for j in range(0,4) %}
+		{% if imgs[i*4 + j] %}
+		<div class="container-info-acc">
+			<div class="col-sm-6 col-md-3 col-item">
+				<div class="item-acc-info">
+					<div class="img-acc">
+						<a href="">
+							<img class="avatar-acc" src="{{imgs[i*4 + j].url_img}}">
+							<span class="ms">MS: {{imgs[i*4 + j].acc_id}}</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="description-info-acc">
+				{% if accounts.items[i*4 + j].hotDescription %}
+					<p class="description-info-acc-detail">{{accounts.items[i*4 + j].hotDescription}}</p>
+				{% endif %}
+			</div>
+			<div class="attribute_info">
+				<div class="info-detail">
+					<p>Lớp: {{accounts.items[i*4 + j].classAcc}}</p>
+					<p>Rank: {{accounts.items[i*4 + j].rank}}</p>
+				</div>
+				<div class="info-detail">
+					<p>Máy chủ: {{accounts.items[i*4 + j].server}}</p>
+					<p>Thẻ: {{accounts.items[i*4 + j].card}}</p>
+				</div>
+			</div>
+			<div class="row-price-acc">
+				<div class="price-acc-action">{{accounts.items[i*4 + j].price}}</div>
+				<div class="view-detail-acc"><a href="/acc/{{accounts.items[i*4 + j].id}}" class="info-acc-by-id-button">CHI TIẾT</a></div>
+			</div>
+		</div>
+		{% endif %}
+		{% endfor %}
+	</div>
+	{% endfor %}
+	<div class="page-container">
+		<div class="pagination">
+		    {% if accounts.has_prev %}
+		        <span>
+		            <a class='page-number button-prev-num' href="{{ url_for('user.list_acc', page=accounts.prev_num) }}">
+		                {{ '<<' }}
+		            </a>
+		        </span>
+		    {% endif %}
+
+		    {% for number in accounts.iter_pages() %}
+		        {% if accounts.page != number %}
+		            <span>
+		                    <a class='page-number'
+		                        href="{{ url_for('user.list_acc', page=number) }}">
+		                    {{ number }}
+		                    </a>
+		            </span>
+		        {% else %}
+		            <span class='current-page-number'>{{ number }}</span>
+		        {% endif %}
+		    {% endfor %}
+
+		    {% if accounts.has_next %}
+		        <span>
+		            <a class='page-number button-next-num'
+		                href="{{ url_for('user.list_acc', page=accounts.next_num) }}">
+		                {{ '>>' }}
+		            </a>
+		        </span>
+		    {% endif %}
+		</div>
+	</div>
+</div>
+
+{% endblock %}

@@ -3,7 +3,7 @@ a {
 }
 body{
 	width: 100%;
-	height: 1100px;
+	height: 1500px;
 	display: flex;
 	justify-content: center;
 	background: rgb(2,0,36);
@@ -74,7 +74,305 @@ body{
 	color: white;
 }
 .header-container{
-	width: 80%;
-	height: 56px;
+	width: 100%;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+}
+.body-admin{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	background-color: white;
+}
+.menu-admin-action{
+	width: 20%;
+	height: 100%;
+}
+.table-data{
+	width: 800px;
+	height: 100px;
+}
+.title-table{
+	height:30px;
+	width: 70px !important;
+}
+.info-container{
+	width: 100%;
+	height: 700px;
+	display: flex;
+	justify-content: center;
+}
+.detail-info-container{
+	width: 1150px;
+	height:100%;
+	display: flex;
+}
+.menu-action-column{
+	width: 35%;
+	height: 100%;
+}
+.info-action-column{
+	width: 65%;
+	height: 100%;
+}
+.menu-action-row1{
+	width: 100%;
+	height: 50%;
+}
+.info-user-container{
+	display: flex;
+	height: 90%;
+	width: 100%;
+}
+.info-user-column1{
+	height: 100%;
+	width: 50%;
+}
+.container-body-info{
+	height: 100%;
+	width: 100%;
+	background-color: aliceblue;
+}
+.base{
+	display: flex;
+	height: 100%;
+	justify-content: center;
+
+}
+.container-base{
+	height: 100%;
+	width: 120%;
+	background-color: aliceblue;
+	justify-content: center;
 }
 
+
+
+
+
+/* Trang home */
+.item-outstanding-container{
+	display: flex;
+	width: 100%px;
+	height: 300px;
+	justify-content: space-evenly;
+	margin-top: 30px;
+}
+.item-outstanding{
+	width: 300px;
+	height: 100%;
+}
+.img-item-outstanding{
+	width: 100%;
+	height: 100%
+}
+.container-game_list{
+	width: 306px;
+	border-style: solid;
+  	border-color: gray;
+}
+.info_list_game{
+	display: flex;
+	justify-content: center;
+}
+.item-acc-info{
+	width: 300px;
+}
+.avatar-list-game{
+	width: 100%;
+}
+.view-all-acc-button{
+	color: black;
+}
+.row-view-acc{
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+
+
+/* Trang list acc */
+
+.row-item-acc{
+	height: 385px;
+	width: 100%;
+	display: flex;
+	margin-top: 30px;
+}
+.avatar-acc{
+	margin-top: 10px;
+	width: 253px;
+	height: 200px;
+}
+.ms{
+	width: 64px;
+	height: 20px;
+	background-color: #a94442;
+	color: white;
+	position: absolute;
+	top: 5px;
+	right: -208px;
+}
+.description-info-acc{
+	width: 100%;
+	height: 40px;
+	background-color: #8a6969;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+.container-info-acc{
+	height: 100%;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 1px solid #b1154a;
+	width: 23%;
+}
+.attribute_info{
+	width: 100%;
+	display: flex;
+}
+.info-detail{
+	margin-top: 10px;
+	width: 50%;
+	margin-left: 10px;
+}
+.row-price-acc{
+	display: flex;
+	width: 100%;
+	height: 50px;
+}
+.price-acc-action{
+	width: 100px;
+	height: 35px;
+	border-style: solid;
+  	border-color: #EE3B3B;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 10px;
+	color: #EE3B3B;
+	font-weight: bold;
+}
+.view-detail-acc{
+	width: 100px;
+	height: 35px;
+	margin-left: 50px;
+	background-color: #32c5d2;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+}
+.info-acc-by-id-button{
+	color: white;
+	font-weight: 30px;
+}
+.body-list-acc{
+	width: 100%;
+	height: 1200px;
+}
+.description-info-acc-detail{
+	height: 100%;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search-list-acc{
+	display: flex;
+	justify-content: space-between;
+}
+.search-list-acc-item{
+	width: 300px;
+	height: 50px;
+	margin-top: 10px;
+}
+.form-search{
+	margin-left: 40px;
+}
+.btn-search-acc{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 70px;
+	height: 30px;
+	margin-left: -80px;
+	margin-top: 10px;
+}
+.btn-all-acc{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 70px;
+	height: 30px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.action-list-acc{
+	display: flex;
+}
+.img-detail-acc{
+	width: 400px;
+	height: 300px
+}
+
+/* Trang info detail acc */
+.info-id-acc-by-id{
+	display: flex;
+	justify-content: space-around;
+	height: 120px;
+}
+.id-acc{
+	font-weight: bold;
+	font-size: 30px;
+}
+.price-acc{
+	margin-top: 20px;
+	font-weight: bold;
+	font-size: 30px;
+	color: #32c5d2 
+}
+.info-acc{
+	display: flex;
+	margin-top: 10px;
+}
+.column1{
+	width: 33%;
+	margin-left: 15px;
+}
+.label-info{
+	font-size: 15px;
+	font-weight: bold;
+	color: #5c6873;
+	display: flex;
+}
+
+
+/* Pagination */
+.page-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+	font-size: 30px;
+}
+.current-page-number{
+	font-weight: bold;
+}
+.page-number{
+	font-size: 23px;
+}
+.button-prev-num{
+	margin-right: 20px;
+}
+.button-next-num{
+	margin-left: 20px;
+}
+.page-number{
+	color:gray;
+}

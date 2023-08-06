@@ -13,9 +13,9 @@
 				<h3>Đăng ký thành viên</h3>
 			</div>
 			<span class="help-block" style="text-align: center;color: #dd4b39">
-                <strong id="messageError"></strong>
+                <strong id="messageError">{{msg_register_error}}</strong>
             </span>          
-			<form method="POST" class="form-body">
+			<form method="POST" class="form-body form-register">
 				<div class="form-row">
 					<input type="text" class="form-control" name="username" value="" placeholder="Tài khoản">
 				</div>
@@ -28,7 +28,7 @@
 				<div class="form-row">
 					<input type="text" class="form-control" name="password-confirm" value="" placeholder="Xác nhận mật khẩu">
 				</div>
-				<button type="submit" class="btn btn-primary btn-register" id="registerButton"><a class="a-btn-register" onclick="registerFormSubmit()">Đăng ký</a></button>
+				<button type="submit" class="btn btn-primary btn-register" id="registerButton" onclick="registerFormSubmit()">Đăng ký</button>
 			</form>
 			<div class="social-auth-links text-center">
                 <p style="margin-top: 10px">-- HOẶC --</p>

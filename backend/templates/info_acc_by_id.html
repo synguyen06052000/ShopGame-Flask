@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+{% if acc %}
+	<div class="info-id-acc-by-id">
+		<div>
+			<div class="id-acc">#{{acc.id}}</div>
+			<div style="color: red; font-size: 15px; font-weight: bold;">Acc LLPLK</div>
+		</div>
+		<div class="price-acc">
+			{{acc.price}} ATM
+		</div>
+		<div>
+			<button type="button" class="btn btn-primary" style="margin-top: 20px;">MUA NGAY</button>
+		</div>
+	</div>
+	<hr width="60%" align="center" color="black" />
+	<div class="info-acc">
+		<div class="column1">
+			<div class="label-info">LỚP:<p style="color:#eb5d68 !important; margin-left: 10px;">{{acc.classAcc}}</p></div>
+			<div class="label-info">THẺ:<p style="color:#eb5d68 !important; margin-left: 10px;">{{acc.card}}</p></div>
+			<div class="label-info">NỔI BẬT:<p style="color:#eb5d68 !important; margin-left: 10px;">{{acc.hotDescription}}</p></div>
+		</div>
+		<div class="column1">
+			<div class="label-info">RANK:<p style="color:#eb5d68 !important; margin-left: 10px;">{{acc.rank}}</p></div>
+			<div class="label-info">VŨ KHÍ:<p style="color:#eb5d68 !important; margin-left: 10px;">{{acc.weapon}}</p></div>
+		</div>
+		<div class="column1">
+			<div class="label-info">MÁY CHỦ:<p style="color:#eb5d68 !important; margin-left: 10px;">{{acc.server}}</p></div>
+			<div class="label-info">CẤP ĐỘ:<p style="color:#eb5d68 !important; margin-left: 10px;">{{acc.level}}</p></div>
+		</div>
+	</div>
+	<hr width="60%" align="center" color="black" margin-top="10px"/>
+	<div style="margin-top: 30px;">
+		{% for i in range(0,imgs|length) %}
+			<center>
+				<img class="img-detail-acc" src="{{imgs[i].url_img}}">
+			</center>
+		{% endfor %}
+	</div>
+{% else %}
+	<center><h3>Không có dữ liệu phù hợp</h3></center>
+{% endif %}
+{% endblock %}
