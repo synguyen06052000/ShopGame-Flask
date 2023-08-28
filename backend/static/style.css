@@ -79,6 +79,8 @@ body{
 	display: flex;
 	justify-content: center;
 }
+
+/* Trang admin */
 .body-admin{
 	height: 100%;
 	width: 100%;
@@ -88,6 +90,43 @@ body{
 .menu-admin-action{
 	width: 20%;
 	height: 100%;
+}
+.dashboard-icon{
+	width: 20px;
+	height: 20px;
+}
+.add-account-icon{
+	width: 25px;
+	height: 25px;
+}
+.dashboard-container{
+	height: 40px;
+	margin-left: 35px;
+}
+.all-user-container{
+	height: 40px;
+	margin-left: 40px;
+}
+.add-account-container{
+	height: 40px;
+	margin-left: 37px;
+}
+.admin-title{
+	color:white;
+	font-weight: bold;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+}
+.container-menu-admin-action{
+	width: 80%;
+	height: 100%;
+	border-radius: 10px;
+	background-color: #344767;
+	margin-left: 20px;
+	margin-top: 50px;
 }
 .table-data{
 	width: 800px;

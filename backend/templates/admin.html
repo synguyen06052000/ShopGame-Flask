@@ -10,8 +10,28 @@
 <body>
 	<div class="body-admin">
 		<div class="menu-admin-action">
-			<p><a href="/admin/get-all-users">Tất cả người dùng</a></p>
-			<p><a href="/admin/add-acc">Thêm acc</a></p>
+			<div class="container-menu-admin-action">
+				<a href="/admin/add-acc"><div class="admin-title">DASHBOARD</div></a>
+				<hr width="40%" align="center" color="#32c5d2"/>
+				<div class="dashboard-container">
+					<a href="/admin" style="color:black; font-size:20px; margin-left: 5px;">
+					<img class="dashboard-icon" src="{{url_for('static', filename='/Image/' + 'dashboard.png')}}">
+					Dashboard
+					</a>
+				</div>
+				<div class="all-user-container">
+					<a href="/admin/get-all-users" style="color:black; font-size:20px;">
+					<img class="dashboard-icon" src="{{url_for('static', filename='/Image/' + 'profile.png')}}">
+					Tất cả người dùng
+					</a>
+				</div>
+				<div class="add-account-container">
+					<a href="/admin/add-acc" style="color:black; font-size:20px;">
+					<img class="add-account-icon" src="{{url_for('static', filename='/Image/' + 'add.png')}}">
+					Thêm account
+					</a>
+				</div>
+			</div>	
 		</div>
 		{% block content %}
 		{% endblock %}
