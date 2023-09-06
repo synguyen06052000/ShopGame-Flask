@@ -33,10 +33,13 @@ def handle_login_post():
             if user:
                 # if check_password_hash(user.password, password):
                 if user.password == password:
-                    session.permanent = True
-                    login_user(user, remember=True)
-                    print("Login success", current_user)
-                    return redirect(url_for("user.home"))
+                    if user.role == 0:
+                        session.permanent = True
+                        login_user(user, remember=True)
+                        print("Login success", current_user)
+                        return redirect(url_for("user.home"))
+                    elif user.role == 1:
+                        return redirect(url_for("admin.admin_home"))
                 else:
                     msg_login_error = "Mật khẩu không chính xác"
             else:
