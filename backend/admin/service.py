@@ -24,8 +24,14 @@ def get_home_admin():
     return render_template("admin.html")
 def get_dashboard():
     users = User.query.all()
-    print(len(users))
-    return render_template("admin_dashboard.html")
+    currentMonth = datetime.now().month
+    countUserCurrent = 0
+    for user in users:
+        print("User:", user.datejoin.month)
+        if user.datejoin.month == currentMonth:
+             countUserCurrent += 1
+    print("User moi dang ky: ", countUserCurrent)
+    return render_template("admin_dashboard.html", total_acc = countUserCurrent)
 
 def get_data_json():
     users = User.query.all()
