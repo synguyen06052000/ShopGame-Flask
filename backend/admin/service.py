@@ -22,6 +22,10 @@ def render_picture(data):
 
 def get_home_admin():
     return render_template("admin.html")
+def get_dashboard():
+    users = User.query.all()
+    print(len(users))
+    return render_template("admin_dashboard.html")
 
 def get_data_json():
     users = User.query.all()
